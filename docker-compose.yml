@@ -1,0 +1,15 @@
+version: '3'
+services:
+  api-python:
+    build: ./backend-python
+    ports:
+      - "5000:5000"
+  api-node:
+    build: ./backend-node
+    ports:
+      - "3000:3000"
+  db:
+    image: postgres
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: pass
